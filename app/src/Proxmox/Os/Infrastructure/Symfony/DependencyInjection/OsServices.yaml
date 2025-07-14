@@ -1,0 +1,5 @@
+services:
+  GridCP\Proxmox\Os\Application\Service\GetAllOsService:
+    arguments:
+      $osRepository: '@GridCP\Proxmox\Os\Infrastructure\DB\MySQL\Repository\OsRepository'
+      $logger: '@logger'

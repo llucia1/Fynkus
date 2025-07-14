@@ -1,0 +1,29 @@
+services:
+  GridCP\Node\Application\Service\CreateNodeService:
+    arguments:
+      $nodeRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeRepository'
+      $nodeFloatgroupRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeFloatGroupRepository'
+      $queryBus: '@queryBus'
+      $logger: '@logger'
+
+  GridCP\Node\Application\Service\PatchNodeService:
+    arguments:
+      $nodeRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeRepository'
+      $nodeFloatgroupRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeFloatGroupRepository'
+      $logger: '@logger'
+      $queryBus: '@queryBus'
+      
+  GridCP\Node\Application\Service\ListAllNodesService:
+    arguments:
+      $nodeRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeRepository'
+      $logger: '@logger'
+
+  GridCP\Node\Application\Service\ListNodeByUuidService:
+    arguments:
+      $nodeRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeRepository'
+      $logger: '@logger'
+
+  GridCP\Node\Application\Service\DeleteNodeService:
+    arguments:
+      $nodeRepository: '@GridCP\Node\Infrastructure\DB\MySQL\Repository\NodeRepository'
+      $logger: '@logger'
